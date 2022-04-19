@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Information</title>
+</head>
+<body>
+<h2>Submitted Employee Information</h2>
+<!--<table>
+    <tr>
+        <td>Name:</td>
+        <td th:text="${name}"></td>
+    </tr>
+    <tr>
+        <td>Contact Number:</td>
+        <td th:text="${contactNumber}"></td>
+    </tr>
+    <tr>
+        <td>Id:</td>
+        <td th:text="${id}"></td>
+    </tr>
+</table>-->
+<table th:object="${information}">
+    <tr>
+        <td>Name:</td>
+        <td>
+            <input th:field="*{name}"></input>
+        </td>
+    </tr>
+    <tr>
+        <td>Contact Number:</td>
+        <td>
+            <input th:field="*{contactNumber}"></input>
+        </td>
+    </tr>
+    <tr>
+        <td>Id:</td>
+        <td>
+            <input th:field="*{id}"></input>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
